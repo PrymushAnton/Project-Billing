@@ -24,7 +24,9 @@ from project_billing.settings import DEBUG, MEDIA_ROOT, MEDIA_URL
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', adding_new_tenant, name='reg'),
-    path('login/', log, name="log")
+    path('adding_new_tenant/', adding_new_tenant, name='adding_new_tenant'),
+    path('main/', main, name='main'),
+    path('logouts/', logouts, name='logouts'),
 ]
 
 if DEBUG:

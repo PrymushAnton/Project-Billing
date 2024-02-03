@@ -10,21 +10,14 @@
 <body>
     <header></header>
     <main>
-        <a href="{% url 'log' %}">Є акаунт? Ввійти</a>
-        <form action="" method="POST">
+        <div class="have_or_not_account"></div>
+
+        <form action="" method="POST" class="form">
             {% csrf_token %}
-            <p>Логін</p>
-            <input type="text" name="login">
-            <p>Ім'я</p>
-            <input type="text" name="first_name">
-            <p>Прізвище</p>
-            <input type="text" name="last_name">
-            <p>Пароль</p>
-            <input type="password" name="password">
-            <p>Пошта</p>
-            <input type="text" name="email">
-            <button>Зареєструватись</button>
+            <div class="form_div"></div>
+            
         </form>
+
     </main>
     <footer></footer>
 </body>
