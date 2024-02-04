@@ -10,15 +10,23 @@
 <body>
     <header></header>
     <main>
-        <div class="have_or_not_account"></div>
-
+        <div class="have_or_not_account">
+            <button class="login" id="theme">Створити акаунт</button>
+        </div>
         <form action="" method="POST" class="form">
             {% csrf_token %}
-            <div class="form_div"></div>
-            
+            <label for="login">Логін</label>
+            <input type="text" name="login" id="login">
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password">
+            <label for="email">Пошта</label>
+            <input type="text" name="email" id="email">
+            <input type="hidden" name='setting' value="login">
+            <button class="submit" type="button">Зареєструватись</button>
         </form>
-
     </main>
-    <footer></footer>
+    <footer>
+        <div class="error"></div>
+    </footer>
 </body>
 </html>
