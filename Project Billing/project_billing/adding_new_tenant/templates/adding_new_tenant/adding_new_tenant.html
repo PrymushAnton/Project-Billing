@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Billing Site</title>
+    <link rel="shortcut icon" href='https://cdn-icons-png.flaticon.com/512/2150/2150264.png'>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="{% static 'adding_new_tenant/js/auth_reg.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'adding_new_tenant/css/reg.css' %}">
 </head>
 <body>
     <header></header>
     <main>
         <div class="have_or_not_account">
+            <label for=""></label>
             <button class="login" id="theme">Створити акаунт</button>
         </div>
+
         <form action="" method="POST" class="form">
             {% csrf_token %}
             <label for="login">Логін</label>
@@ -24,9 +28,11 @@
             <input type="hidden" name='setting' value="login">
             <button class="submit" type="button">Зареєструватись</button>
         </form>
+        
+        <div class="error"></div>
     </main>
     <footer>
-        <div class="error"></div>
+        
     </footer>
 </body>
 </html>

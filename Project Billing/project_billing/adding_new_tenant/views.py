@@ -1,10 +1,11 @@
 import json
 
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.utils import IntegrityError
 from django.http import HttpResponseBadRequest, JsonResponse
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, logout
+from django.shortcuts import redirect, render
+
 
 # Create your views here.
 def adding_new_tenant(request):
@@ -35,7 +36,7 @@ def adding_new_tenant(request):
                     except:
                         context['error'] = 'Вибачте! Сталася невідома помилка...'
                     finally:
-                        return redirect('main')
+                        context['error'] = 'succ'
                 else:
                     context['error'] = "Користувача не найдено!"
             else:
@@ -43,10 +44,6 @@ def adding_new_tenant(request):
         return JsonResponse(context)
     else:
         return render(request, 'adding_new_tenant/adding_new_tenant.html')
-
-def main(request):
-    context = {}
-    return render(request, 'adding_new_tenant/main.html', context)
 
 def logouts(request):
     context = {}

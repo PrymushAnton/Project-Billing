@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 110%;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #E49B0F;
+}
+
+
+button{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 140, 0);
+    cursor: pointer;
+    padding: 7px;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.05);
+}

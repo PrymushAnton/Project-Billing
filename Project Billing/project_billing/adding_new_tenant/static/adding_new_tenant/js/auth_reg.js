@@ -18,6 +18,7 @@ $(document).ready(function() {
             $(`*#last_name`).remove()
             $(`*#first_name`).remove()
         }
+        $(`.error`).empty()
     })
     $('button.submit').click(function(){
         let form = $("form")
@@ -27,9 +28,14 @@ $(document).ready(function() {
             data: form.serialize(),
             success: function (response){
                 $(`.error`).empty()
-                $(`.error`).append(`
-                <h2>${response.error}</h2>
-                `)
+                if(response.error == 'succ'){
+                    window.location.replace('/main/')
+                }
+                else{
+                    $(`.error`).append(`
+                    <h2>${response.error}</h2>
+                    `)
+                }
             }
         })
     })
