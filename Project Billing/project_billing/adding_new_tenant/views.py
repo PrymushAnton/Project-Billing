@@ -29,9 +29,9 @@ def adding_new_tenant(request):
                 context['error'] = "Не всі поля заповнено!"
         if setting == 'login':
             if log and password and email:
-                if authenticate(username = log, password = password):
+                user = authenticate(username = log, password = password)
+                if user:
                     try:
-                        user = User.objects.get(username=log, password=password, email=email)
                         login(request, user)
                     except:
                         context['error'] = 'Вибачте! Сталася невідома помилка...'
