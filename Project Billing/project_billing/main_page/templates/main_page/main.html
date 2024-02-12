@@ -7,7 +7,7 @@
 
 
 {% block main %}
-    <form action="" method="POST">
+    <!-- <form action="" method="POST">
         {% csrf_token %}
         <div id = "ilya">
             <label for="shopping_center">Торговый комплекс:</label>
@@ -73,6 +73,94 @@
         </span>
     </div>
     <button class="third_object">Сохранить</button>
-    <button class="third_object">Отменить</button>
+    <button class="third_object">Отменить</button> -->
+
+
+    <div class="main_div">
+        <span class="div_name">
+            Договора Енергетика
+        </span>
+
+
+        <div class="place">
+            <label for="building">Торговий комплекс:</label>
+            <select id="">
+                <option>Дніпро - Зоряний</option>
+            </select>
+
+            <p>Номер договора:</p>
+            <p id="number_of_agreement">E - DN1F_415</p>
+
+        </div>
+
+        <div class="date">
+            <label for="date_beginning">Початок договору:</label>
+            <input type="date" id="date_beginning">
+
+            <label for="date_end">Дата по:</label>
+            <input type="date" id="date_end">
+
+            <label for="date_of_agreement">Дата угоди:</label>
+            <input type="date" id="date_of_agreement">
+
+            <p class="white_input">Помилок не знайдено</p>
+        </div>
+
+        <div class="sides">
+            <label for="landlord">Орендодавець:</label>
+            <select id="landlord">
+                <option>КЕЙС ЛТД</option>
+            </select>
+
+            <label for="tenant">Орендар:</label>
+            <select id="tenant">
+                <option>COFFEE BOX - Косенко А. І.</option>
+            </select>
+
+            <label for="landlord_ps">Орендар Р/С:</label>
+            <select id="landlord_ps">
+                <option></option>
+            </select>
+
+        </div>
+
+        <div class="info">
+            <div class="div_type">
+                <label for="type">Тип договора:</label>
+                <select id="type">
+                    <option>Договора Енергетика</option>
+                </select>
+            </div>
+
+            <div class="checkboxes">
+                <label for="tax_for_ad">Налог на рекламу</label>
+                <input type="checkbox" id="tax_for_ad">
+                
+                <label for="in_work">В работі</label>
+                <input type="checkbox">
+
+                <label for="closed">Закритий(У архіві)</label>
+                <input type="checkbox" id="closed">
+            </div>
+            
+            <div class="additional_info">
+                <p>Коментар:</p>
+                <p class="white_input"></p>
+
+                <p>Номер договора в рахунку:</p>
+                <p class="white_input">АД-23/07/2021-415</p>
+
+                <label for="main_agreement">Основний договір:</label>
+                <select id="main_agreement">
+                    <option></option>
+                </select>
+                
+                <p>Основний лот:</p>
+                <p class="white_input">415</p>
+            </div>
+            
+        </div>
+
+    </div>
 {% endblock main %}
     

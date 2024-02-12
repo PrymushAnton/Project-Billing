@@ -10,6 +10,8 @@ from django.shortcuts import redirect, render
 # Create your views here.
 def adding_new_tenant(request):
     context = {}
+    
+    
     if request.method == 'POST':
         setting = request.POST.get('setting')
         log = request.POST.get('login')

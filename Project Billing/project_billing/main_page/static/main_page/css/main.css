@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-label{
+/* label{
     font-size: 24px;
 }
 
@@ -41,4 +41,122 @@ select{
 
 input[type="checkbox"]{
     width: 20px;
+} */
+
+label{
+    font-size: 24px;
+}
+input{
+    width: 50px;
+    font-size: 16px;
+}
+
+select{
+    font-size: 20px;
+    height: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border: 2px solid black;
+    width: 1000px;
+}
+
+.div_name{
+    border-bottom: 1px solid black;
+    width: 1000px;
+    background-color: rgb(60, 60, 214);
+    display: flex;
+    justify-content: center;
+}
+
+.place{
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid black;
+    width: 995px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.date{
+    border-bottom: 1px solid black;
+    width: 995px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.sides{
+    border-bottom: 1px solid black;
+    width: 995px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.info{
+    /* padding: 5px; */
+    width: 995px;
+    gap: 5px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 10px; */
+    
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border-right: 1px solid black;
+}
+
+.checkboxes label{
+    font-size: 18px;
+}
+
+p{
+    font-size: 24px;
+    display: inline-block;
+}
+
+.white_input{
+    border: 1px solid black;
+    background-color: white;
+    width: 300px;
+    height: 30px;
+}
+
+.div_type{
+    padding-right: 5px;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+.additional_info{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+}
+
+#landlord_ps{
+    width: 100px;
 }
