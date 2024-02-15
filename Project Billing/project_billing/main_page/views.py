@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 def main(request):
     context = {}
     
-    # context['username'] = User.objects.get(username=request.user)
+
+        
+        
     
     return render(request, 'main_page/main.html', context)

@@ -28,6 +28,7 @@ urlpatterns = [
     path('adding_new_tenant/', adding_new_tenant, name='adding_new_tenant'),
     path('main/', main, name='main'),
     path('logouts/', logouts, name='logouts'),
+    path('contract/', contract, name='contract'),
 ]
 
 if DEBUG:

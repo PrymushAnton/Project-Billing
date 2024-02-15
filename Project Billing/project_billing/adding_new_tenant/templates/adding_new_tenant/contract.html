@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'adding_new_tenant/css/contract.css' %}">
+</head>
+<body>
+    <form action="" method="POST" class="main_div">
+        {% csrf_token %}
+        <span class="div_name">
+            Договора Енергетика
+        </span>
+        <hr>
+        <div class="place">
+            <label for="building">Торговий комплекс:</label>
+            <select id="building" name="building">
+                <option>Дніпро - Зоряний</option>
+            </select>
+
+            <label for="number_of_contract">Номер договора:</label>
+            <input type="text" id="number_of_contract" name="number_of_contract">
+
+        </div>
+
+        <div class="date">
+            <br>
+            <p>Строк дії</p>
+            <hr>
+
+            <label for="date_beginning">Початок договору:</label>
+            <input type="date" id="date_beginning" name="date_beginning">
+
+            <label for="date_end">Дата по:</label>
+            <input type="date" id="date_end" name="date_end">
+
+            <label for="date_of_agreement">Дата угоди:</label>
+            <input type="date" id="date_of_agreement" name="date_of_agreement">
+        </div>
+
+        <div class="sides">
+            <br>
+            <p>Сторони</p>
+            <hr>
+            <label for="landlord">Орендодавець:</label>
+            <select id="landlord" name="landlord">
+                <option>КЕЙС ЛТД</option>
+                <option>1</option>
+            </select>
+
+            <label for="tenant">Орендар:</label>
+            <select id="tenant" name="tenant">
+                <option>COFFEE BOX - Косенко А. І.</option>
+                <option>1</option>
+            </select>
+
+            <label for="tenant_ps">Орендодавець Р/С:</label>
+            <select id="tenant_ps" name="tenant_ps">
+                <option>1</option>
+                <option>2</option>
+            </select>
+
+        </div>
+        
+        <br>
+        <p>Інше</p>
+        <hr>
+
+        <div class="info">
+            
+            <div class="div_type">
+                <label for="type_of_contract">Тип договора:</label>
+                <select id="type_of_contract" name="type_of_contract">
+                    <option>Договора Енергетика</option>
+                    <option>Договора Сантехніка</option>
+                </select>
+            </div>
+
+            <div class="checkboxes">
+                <label for="tax_for_ad">Налог на рекламу</label>
+                <input type="checkbox" id="tax_for_ad" name="tax_for_ad">
+                
+                <label for="in_work">В работі</label>
+                <input type="checkbox" id="in_work" name="in_work">
+
+                <label for="closed">Закритий(У архіві)</label>
+                <input type="checkbox" id="closed" name="closed">
+            </div>
+            
+            <div class="additional_info">
+                <label for="comment">Коментар:</label>
+                <input type="text" name="comment" id="comment">
+
+                <label for="number_of_agreement">Номер договора в рахунку:</label>
+                <input type="text" name="number_of_agreement" id="number_of_agreement">
+
+                <label for="main_agreement">Основний договір:</label>
+                <select id="main_agreement" name="main_agreement">
+                    <option>22334</option>
+                    <option>12312</option>
+                    <option>86864</option>
+                </select>
+                
+                <label for="lot">Основний лот:</label>
+                <select name="lot" id="lot">
+                    <option>415</option>
+                    <option>225</option>
+                    <option>167</option>
+                </select>
+            </div>
+            
+        </div>
+
+        {% if error %}
+            <p>{{error}}</p>
+        {% endif %}
+
+        <button>Зберегти</button>
+    </form>
+</body>
+</html>
